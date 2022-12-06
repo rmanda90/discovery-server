@@ -11,14 +11,4 @@ Open with any ide and use Maven, use the command − mvn clean install
 #just want properties here are the details please copy and add into your yml file.
 
 server:
-  port: 8761 #default port where discovery client is registered
-
-eureka:
-  client:
-    eurekaServerConnectTimeoutSeconds: 5
-    enabled: true
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
-    
+  port: 8761 #default port where discovery client is registered.
