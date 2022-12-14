@@ -1,16 +1,19 @@
+server:
+  port: 8761 #default port where discovery client is registered
+
 spring:
   application:
     name: discovery-server
   profiles:
     active: dev,local
-server:
-  port: 8761 #default port where discovery client is registered
+  config:
+    import: optional:configserver:http://localhost:8888
 
-eureka:
-  client:
-    eurekaServerConnectTimeoutSeconds: 5
-    enabled: true
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
+#eureka:
+#  client:
+#    eurekaServerConnectTimeoutSeconds: 5
+#    enabled: true
+#    registerWithEureka: false
+#    fetchRegistry: false
+#  server:
+#    waitTimeInMsWhenSyncEmpty: 0
